@@ -37,10 +37,10 @@ const answerAnyReq = (req, res) => {
 // router.use("/get/put", answerPutReq);
 // router.use("/get/delete", answerDeleteReq);
 
-router.use("/get", answerGetReq);
-router.use("/post", answerPostReq);
-router.use("/put", answerPutReq);
-router.use("/delete", answerDeleteReq);
+router.get("/get", answerGetReq);
+router.post("/post", answerPostReq);
+router.put("/put", answerPutReq);
+router.delete("/delete", answerDeleteReq);
 router.use("/*", answerAnyReq);
 
 module.exports = {
