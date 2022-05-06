@@ -1,7 +1,5 @@
 const express = require("express");
-
 const router = express.Router();
-
 const books = require("./db/data").books;
 
 // api/get
