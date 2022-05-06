@@ -13,9 +13,9 @@ app.use(express.json());
 const PORT = process.env.PORT || 4000;
 
 app.use("/api", logger, router);
-app.use("/*", (req, res) => {
+app.use("/*", logger, (req, res) => {
   res.statusCode = 404;
-  res.send({ msg: "Couldn't find the request resources" });
+  throw new Error({ message: "Couldn't find the requested resources." });
 });
 
 app.use((err, req, res, next) => {

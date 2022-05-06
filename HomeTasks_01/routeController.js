@@ -49,7 +49,7 @@ const answerDeleteReq = (req, res) => {
 
 // api/something
 const answerAnyReq = (req, res) => {
-  throw new Error("Couldn't find the requested rurces");
+  throw new Error("Couldn't find the requested resources");
 };
 
 router.get("/get", answerGetReq);
